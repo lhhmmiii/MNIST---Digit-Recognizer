@@ -28,16 +28,15 @@ Dùng phép tích chập convolution trên lớp này. Lớp này thường kế
 
 ## 3. Pooling layer
 Pooling layer thường được dùng giữa các convolutional layer, để giảm kích thước dữ liệu nhưng vẫn giữ được các thuộc tính quan trọng. Kích thước dữ liệu giảm giúp giảm việc tính toán trong model.
-Gọi pooling size kích thước $K*K$. Input của pooling layer có kích thước $H*W*D$, ta tách ra làm D ma trận kích thước $H*W$. Với mỗi ma trận, trên vùng kích thước $K*K$ trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
+Gọi pooling size kích thước K*K. Input của pooling layer có kích thước $H*W*D$, ta tách ra làm D ma trận kích thước $H*W$. Với mỗi ma trận, trên vùng kích thước $K*K$ trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
 
 <img src="image/pooling.webp" width="450" height="300">
 Nhưng hầu hết khi dùng pooling layer thì sẽ dùng size=(2,2), stride=2, padding=0. Khi đó output width và height của dữ liệu giảm đi một nửa, depth thì được giữ nguyên.
-Có 2 loại pooling size phổ biến: **max pooling** và **average pooling**.
+Có 2 loại pooling size phổ biến: max pooling và average pooling.
 
 <img src="image/pooling_2.webp" width="300" height="200">
 
 ## 4. Fully connected layer
-Sau khi ảnh được truyền qua nhiều convolutional layer và pooling layer thì model đã học được tương đối các đặc điểm của ảnh (ví dụ mắt, mũi, khung mặt,…) thì tensor của output của layer cuối cùng, kích thước $H*W*D$, sẽ được chuyển về 1 vector kích thước 
-$(H*W*D)$.
+Sau khi ảnh được truyền qua nhiều convolutional layer và pooling layer thì model đã học được tương đối các đặc điểm của ảnh (ví dụ mắt, mũi, khung mặt,…) thì tensor của output của layer cuối cùng, kích thước $H*W*D$, sẽ được chuyển về 1 vector kích thước $(H*W*D)$.
 
 <img src="image/flattern.webp" width="450" height="300">
