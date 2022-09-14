@@ -28,7 +28,7 @@ Dùng phép tích chập convolution trên lớp này. Lớp này thường kế
 
 ## 3. Pooling layer
 Pooling layer thường được dùng giữa các convolutional layer, để giảm kích thước dữ liệu nhưng vẫn giữ được các thuộc tính quan trọng. Kích thước dữ liệu giảm giúp giảm việc tính toán trong model.
-Gọi pooling size kích thước K*K. Input của pooling layer có kích thước $H*W*D$, ta tách ra làm D ma trận kích thước $H*W$. Với mỗi ma trận, trên vùng kích thước $K*K$ trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
+Gọi pooling size kích thước K x K. Input của pooling layer có kích thước H x W x D, ta tách ra làm D ma trận kích thước H x W. Với mỗi ma trận, trên vùng kích thước H x D trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
 
 <img src="image/pooling.webp" width="450" height="300">
 Nhưng hầu hết khi dùng pooling layer thì sẽ dùng size=(2,2), stride=2, padding=0. Khi đó output width và height của dữ liệu giảm đi một nửa, depth thì được giữ nguyên.
