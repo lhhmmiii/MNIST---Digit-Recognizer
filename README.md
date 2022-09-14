@@ -11,18 +11,19 @@ Mỗi lần thực hiện phép tính convolution xong thì kích thước ma tr
  <img src="image/padding.webp" width="300" height="200">
  Phép tính này gọi là convolution với padding=1. Padding = k nghĩa là thêm k vector 0 vào mỗi phía của ma trận.
  **1.3 Strides**
- Ta thực hiệ
- Gọi pooling size kích thước $K*K$. Input của pooling layer có kích thước $H*W*D$, ta tách ra làm D ma trận kích thước $H*W$. Với mỗi ma trận, trên vùng kích thước $K*K$ trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
- <img src="image/pooling.webp" width="450" height="300">
- n tuần tự các phần tử trong ma trận X, thu được ma trận Y cùng kích thước ma trận X, ta gọi là stride=1.
- stride = k thì ta chỉ thực hiện phép tính convolution trên các phần tử $x_{1+i*k,1+j*k}$.
-* Ví dụ k = 2:
+ Ta thực hiện tuần tự các phần tử trong ma trận X, thu được ma trận Y cùng kích thước ma trận X, ta gọi là stride=1.
+ 
+ <img src="image/stride1.webp" width="300" height="200">
+ 
+ Với stride = k thì ta chỉ thực hiện phép tính convolution trên các phần tử $x_{1+i*k,1+j*k}$. Ví dụ k = 2:
 
 <img src="image/stride2.webp" width="300" height="200">
+
 ## 2. Convolutional layer
 Dùng phép tích chập convolution trên lớp này. Lớp này thường kết hợp với hàm ReLU.
 
 <img src="image/convolution2.webp" width="450" height="300">
+
 ## 3. Pooling layer
 Pooling layer thường được dùng giữa các convolutional layer, để giảm kích thước dữ liệu nhưng vẫn giữ được các thuộc tính quan trọng. Kích thước dữ liệu giảm giúp giảm việc tính toán trong model.
 Gọi pooling size kích thước $K*K$. Input của pooling layer có kích thước $H*W*D$, ta tách ra làm D ma trận kích thước $H*W$. Với mỗi ma trận, trên vùng kích thước $K*K$ trên ma trận ta tìm maximum hoặc average của dữ liệu rồi viết vào ma trận kết quả. Quy tắc về stride và padding áp dụng như phép tính convolution trên ảnh.
