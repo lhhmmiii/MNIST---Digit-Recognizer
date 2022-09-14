@@ -12,6 +12,7 @@ Mỗi lần thực hiện phép tính convolution xong thì kích thước ma tr
  Phép tính này gọi là convolution với padding=1. Padding = k nghĩa là thêm k vector 0 vào mỗi phía của ma trận.
  
  **1.3 Strides**
+ 
  Ta thực hiện tuần tự các phần tử trong ma trận X, thu được ma trận Y cùng kích thước ma trận X, ta gọi là stride=1.
  
  <img src="image/stride1.webp" width="300" height="200">
