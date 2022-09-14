@@ -9,6 +9,7 @@
 Mỗi lần thực hiện phép tính convolution xong thì kích thước ma trận Y đều nhỏ hơn X. Nếu ta muốn ma trận Y thu được có kích thước bằng ma trận X thì ta sẽ thêm các giá trị 0 ở viền ngoài ma trận X.
 
  <img src="image/padding.webp" width="300" height="200">
+ 
  Phép tính này gọi là convolution với padding=1. Padding = k nghĩa là thêm k vector 0 vào mỗi phía của ma trận.
  
  **1.3 Strides**
@@ -37,6 +38,6 @@ Có 2 loại pooling size phổ biến: max pooling và average pooling.
 <img src="image/pooling_2.webp" width="300" height="200">
 
 ## 4. Fully connected layer
-Sau khi ảnh được truyền qua nhiều convolutional layer và pooling layer thì model đã học được tương đối các đặc điểm của ảnh (ví dụ mắt, mũi, khung mặt,…) thì tensor của output của layer cuối cùng, kích thước $H*W*D$, sẽ được chuyển về 1 vector kích thước $(H*W*D)$.
+Sau khi ảnh được truyền qua nhiều convolutional layer và pooling layer thì model đã học được tương đối các đặc điểm của ảnh (ví dụ mắt, mũi, khung mặt,…) thì tensor của output của layer cuối cùng, kích thước H x W x D, sẽ được chuyển về 1 vector kích thước H x W x D.
 
 <img src="image/flattern.webp" width="450" height="300">
