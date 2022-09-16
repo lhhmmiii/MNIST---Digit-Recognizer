@@ -1,26 +1,33 @@
-# MNIST - Digit Recognizer
-## Lý thuyết (Chỉ xét trên ảnh xám)
-**1.1 Convolution**
+# Lý thuyết
+## 1. Phép tính Convolution
+### 1.1 Convolution
+Để cho dễ hình dung mình sẽ lấy ví dụ trên ảnh xám, tức là ảnh được biểu diễn dưới dạng ma trận A kích thước $m*n$.
+
+Ta định nghĩa **kernel** là một ma trận vuông kích thước $k*k$ với k lẻ, kí hiệu là W.
 
 <img src="image/convolution.webp" width="450" height="300">
 
-**1.2 Padding**
-
+### 1.2 Padding
 Mỗi lần thực hiện phép tính convolution xong thì kích thước ma trận Y đều nhỏ hơn X. Nếu ta muốn ma trận Y thu được có kích thước bằng ma trận X thì ta sẽ thêm các giá trị 0 ở viền ngoài ma trận X.
 
  <img src="image/padding.webp" width="300" height="200">
  
  Phép tính này gọi là convolution với padding=1. Padding = k nghĩa là thêm k vector 0 vào mỗi phía của ma trận.
  
- **1.3 Strides**
- 
+### 1.3 Strides
  Ta thực hiện tuần tự các phần tử trong ma trận X, thu được ma trận Y cùng kích thước ma trận X, ta gọi là stride=1.
  
  <img src="image/stride1.webp" width="300" height="200">
  
- Với stride = k thì ta chỉ thực hiện phép tính convolution trên các phần tử $x_{1+i*k,1+j*k}$. Ví dụ k = 2:
+Với stride = k thì ta chỉ thực hiện phép tính convolution trên các phần tử $x_{1+i*k,1+j*k}$. Ví dụ k = 2:
 
 <img src="image/stride2.webp" width="300" height="200">
+
+### 1.4 Ý nghĩa của phép tính convolution
+
+Mục đích của phép tính convolution trên ảnh là làm mở, làm nét ảnh; xác định các đường;… Mỗi kernel khác nhau thì sẽ phép tính convolution sẽ có ý nghĩa khác nhau. Ví dụ:
+
+<img src="image/ynghia.png" width="600" height="200">
 
 ## 2. Convolutional layer
 Dùng phép tích chập convolution trên lớp này. Lớp này thường kết hợp với hàm ReLU.
