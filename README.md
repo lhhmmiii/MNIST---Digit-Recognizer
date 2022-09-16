@@ -5,7 +5,7 @@
 
 Ta định nghĩa **kernel** là một ma trận vuông kích thước $k*k$ với k lẻ, kí hiệu là W.
 
-Phép tính convolution kí hiệu là ($\otimes$). $Y=X \otimes W$
+Phép tính convolution kí hiệu là ($ \otimes $). $Y=X \otimes W$
 
 <img src="image/convolution.webp" width="450" height="300">
 
