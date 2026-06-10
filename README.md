@@ -6,8 +6,6 @@ the classic [MNIST dataset](http://yann.lecun.com/exdb/mnist/).
 Draw a digit with your mouse (or upload an image) and watch the model predict
 it in real time — complete with per-class confidence scores and inference timing.
 
-![Demo screenshot](image/convolution.webp)
-
 ---
 
 ## 🗂️ Project Structure
