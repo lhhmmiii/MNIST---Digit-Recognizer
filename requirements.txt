@@ -1,0 +1,10 @@
+# Core ML stack
+tensorflow>=2.12.0
+numpy>=1.23.0
+
+# Web app
+streamlit>=1.30.0
+streamlit-drawable-canvas>=0.9.3
+
+# Image processing
+Pillow>=9.5.0
